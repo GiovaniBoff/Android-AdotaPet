@@ -3,6 +3,8 @@ package br.edu.ifrs.adotapet.data.entity;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -12,6 +14,13 @@ public class Pet {
     private String name;
     private String breed;
     private String size;
+
+    public Pet( String name, String breed, String size) {
+
+        this.name = name;
+        this.breed = breed;
+        this.size = size;
+    }
 
     public int getId() {
         return id;
@@ -43,5 +52,17 @@ public class Pet {
 
     public void setSize(String size) {
         this.size = size;
+    }
+
+    public static List<Pet> mockPets(){
+        List<Pet> pets = new ArrayList<>();
+        pets.add(new Pet("pet1", "raça1", "size1"));
+        pets.add(new Pet("pet2", "raça2", "size2"));
+        pets.add(new Pet("pet3", "raça3", "size3"));
+        pets.add(new Pet("pet4", "raça4", "size4"));
+        pets.add(new Pet("pet5", "raça5", "size5"));
+        pets.add(new Pet("pet6", "raça6", "size6"));
+        pets.add(new Pet("pet7", "raça7", "size7"));
+        return pets;
     }
 }

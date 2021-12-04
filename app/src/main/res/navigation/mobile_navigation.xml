@@ -30,5 +30,20 @@
         android:label="Cadastro"
         tools:layout="@layout/fragment_registration"
         />
+    <fragment
+        android:id="@+id/addPetFragment"
+        android:name="br.edu.ifrs.adotapet.ui.home.AddPetFragment"
+        android:label="fragment_add_pet"
+        tools:layout="@layout/fragment_add_pet" />
+    <fragment
+        android:id="@+id/editPetFragment"
+        android:name="br.edu.ifrs.adotapet.ui.home.EditPetFragment"
+        android:label="fragment_edit_pet"
+        tools:layout="@layout/fragment_edit_pet" />
+    <fragment
+        android:id="@+id/listPetFragment"
+        android:name="br.edu.ifrs.adotapet.ui.home.ListPetFragment"
+        android:label="fragment_list_pet"
+        tools:layout="@layout/fragment_list_pet" />
 
 </navigation>

@@ -3,6 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Giovani/Documents/ESTUDOS/ifrs/Android-AdotaPet/app/src/main/res/layout/app_bar_main.xml" value="0.13994565217391305" />
+        <entry key="..\:/Users/Giovani/Documents/ESTUDOS/ifrs/Android-AdotaPet/app/src/main/res/layout/content_main.xml" value="0.13994565217391305" />
+        <entry key="..\:/Users/Giovani/Documents/ESTUDOS/ifrs/Android-AdotaPet/app/src/main/res/layout/fragment_add_pet.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Giovani/Documents/ESTUDOS/ifrs/Android-AdotaPet/app/src/main/res/layout/fragment_edit_pet.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Giovani/Documents/ESTUDOS/ifrs/Android-AdotaPet/app/src/main/res/layout/fragment_home.xml" value="0.13994565217391305" />
+        <entry key="..\:/Users/Giovani/Documents/ESTUDOS/ifrs/Android-AdotaPet/app/src/main/res/layout/fragment_list_pet.xml" value="0.25" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.371875" />
         <entry key="app/src/main/res/drawable/ic_launcher_adotaPet_background.xml" value="0.371875" />
         <entry key="app/src/main/res/drawable/ic_launcher_adotapet_background.xml" value="0.2564814814814815" />
