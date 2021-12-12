@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_login">
+    app:startDestination="@+id/homeListFragment">
 
     <fragment
         android:id="@+id/nav_home"
@@ -45,5 +45,17 @@
         android:name="br.edu.ifrs.adotapet.ui.home.ListPetFragment"
         android:label="fragment_list_pet"
         tools:layout="@layout/fragment_list_pet" />
+    <fragment
+        android:id="@+id/homeListFragment"
+        android:name="br.edu.ifrs.adotapet.HomeListFragment"
+        android:label="fragment_home_list"
+        tools:layout="@layout/fragment_home_list" >
+        <action
+            android:id="@+id/action_homeListFragment_to_addPetFragment"
+            app:destination="@id/addPetFragment" />
+        <action
+            android:id="@+id/action_homeListFragment_to_listPetFragment"
+            app:destination="@id/listPetFragment" />
+    </fragment>
 
 </navigation>

@@ -2,9 +2,12 @@ package br.edu.ifrs.adotapet.data.dao;
 
 import static androidx.room.OnConflictStrategy.REPLACE;
 
+import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
+import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
+import androidx.room.Update;
 
 import java.util.List;
 
@@ -14,7 +17,7 @@ import br.edu.ifrs.adotapet.data.entity.Pet;
 public interface PetDAO {
 
     @Query("SELECT * FROM Pet")
-    List<Pet> getAll();
+    LiveData<List<Pet>> getAll();
 
     @Query("SELECT * FROM Pet WHERE Id = :ID")
     Pet getByID(int ID);
@@ -22,7 +25,10 @@ public interface PetDAO {
     @Insert(onConflict = REPLACE)
     void insert(Pet pet);
 
-//    void update(Pet pet);
+    @Update
+    void update(Pet pet);
 
+    @Delete
+    void delete(Pet pet);
 
 }

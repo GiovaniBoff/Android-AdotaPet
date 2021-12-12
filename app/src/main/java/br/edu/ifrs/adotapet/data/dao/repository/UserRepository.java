@@ -20,12 +20,12 @@ public class UserRepository {
         userDao = db.userDAO();
     }
 
-    LiveData<List<User>> getAllUser(){
+    public LiveData<List<User>> getAllUser(){
         AllUsers = userDao.getAll();
         return AllUsers;
     }
 
-    void insert(User user){
+    public void insert(User user){
         db.databaseWriteExecutor.execute(()->{
             userDao.insert(user);
         });

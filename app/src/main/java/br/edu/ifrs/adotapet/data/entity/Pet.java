@@ -15,7 +15,15 @@ public class Pet {
     private String breed;
     private String size;
 
-    public Pet( String name, String breed, String size) {
+    public Pet() {
+    }
+
+    public Pet(String name, String size) {
+        this.name = name;
+        this.size = size;
+    }
+
+    public Pet(String name, String breed, String size) {
 
         this.name = name;
         this.breed = breed;

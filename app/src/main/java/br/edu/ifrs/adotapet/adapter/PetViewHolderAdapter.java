@@ -14,10 +14,10 @@ import java.util.List;
 import br.edu.ifrs.adotapet.R;
 import br.edu.ifrs.adotapet.data.entity.Pet;
 
-public class ListPetAdapter extends RecyclerView.Adapter<ListPetAdapter.ViewHolder> {
+public class PetViewHolderAdapter extends RecyclerView.Adapter<PetViewHolderAdapter.ViewHolder> {
     List<Pet> petsData = new ArrayList<>();
 
-    public ListPetAdapter(List<Pet> pets) {
+    public PetViewHolderAdapter(List<Pet> pets) {
         this.petsData = pets;
     }
 
@@ -37,24 +37,27 @@ public class ListPetAdapter extends RecyclerView.Adapter<ListPetAdapter.ViewHold
 
     @NonNull
     @Override
-    public ListPetAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public PetViewHolderAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View from = LayoutInflater.from(parent.getContext()).inflate(R.layout.fragment_list_pet,parent,false);
 
         return new ViewHolder(from);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ListPetAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull PetViewHolderAdapter.ViewHolder holder, int position) {
         Pet pet = petsData.get(position);
         holder.petName.setText(pet.getName());
         holder.petBreed.setText(pet.getBreed());
         holder.petSize.setText(pet.getSize());
     }
 
+
     @Override
     public int getItemCount() {
         return petsData.size();
     }
 
-
+    public void setPetsData(List<Pet> pets){
+        petsData = pets;
+    }
 }
