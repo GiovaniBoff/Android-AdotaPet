@@ -6,13 +6,15 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+    <string name="action_delete">Excluir</string>
+    <string name="action_update">Editar</string>
 
     <string name="menu_home">Home</string>
     <string name="menu_add_pet">Adicionar Pet</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <string-array name="breeds_array">
+    <string-array name="sizes_array">
         <item>Pequeno</item>
         <item>Médio</item>
         <item>Grande</item>

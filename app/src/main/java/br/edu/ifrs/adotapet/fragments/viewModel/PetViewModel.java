@@ -1,4 +1,4 @@
-package br.edu.ifrs.adotapet.data.viewModel;
+package br.edu.ifrs.adotapet.fragments.viewModel;
 
 import android.app.Application;
 
@@ -8,8 +8,8 @@ import androidx.lifecycle.LiveData;
 
 import java.util.List;
 
-import br.edu.ifrs.adotapet.data.dao.repository.PetRepository;
-import br.edu.ifrs.adotapet.data.entity.Pet;
+import br.edu.ifrs.adotapet.model.dao.repository.PetRepository;
+import br.edu.ifrs.adotapet.model.Pet;
 
 public class PetViewModel extends AndroidViewModel {
 
@@ -26,7 +26,16 @@ public class PetViewModel extends AndroidViewModel {
         return mAllPets;
     }
 
+    public Pet getPetById(int id){
+        return  mRepository.getPetById(id);
+    }
     public void insert(Pet pet){
         mRepository.insert(pet);
     }
+
+    public void update(Pet pet) { mRepository.update(pet);}
+
+    public void delete(Pet pet) { mRepository.delete(pet);}
+
+
 }

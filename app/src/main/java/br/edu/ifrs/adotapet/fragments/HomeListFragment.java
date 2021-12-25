@@ -1,4 +1,4 @@
-package br.edu.ifrs.adotapet;
+package br.edu.ifrs.adotapet.fragments;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -15,6 +15,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import br.edu.ifrs.adotapet.R;
 import br.edu.ifrs.adotapet.databinding.FragmentHomeListBinding;
 
 

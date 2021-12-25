@@ -1,4 +1,4 @@
-package br.edu.ifrs.adotapet.data.entity;
+package br.edu.ifrs.adotapet.model;
 
 
 import androidx.room.Entity;

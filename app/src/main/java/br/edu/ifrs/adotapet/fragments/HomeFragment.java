@@ -1,9 +1,12 @@
-package br.edu.ifrs.adotapet.ui.home;
+package br.edu.ifrs.adotapet.fragments;
 
 import android.os.Bundle;
+import android.view.ContextMenu;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 
 import androidx.annotation.NonNull;
 
@@ -13,9 +16,10 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import br.edu.ifrs.adotapet.adapter.PetViewHolderAdapter;
-import br.edu.ifrs.adotapet.data.entity.Pet;
-import br.edu.ifrs.adotapet.data.viewModel.PetViewModel;
+import br.edu.ifrs.adotapet.R;
+import br.edu.ifrs.adotapet.fragments.adapter.PetViewHolderAdapter;
+import br.edu.ifrs.adotapet.model.Pet;
+import br.edu.ifrs.adotapet.fragments.viewModel.PetViewModel;
 import br.edu.ifrs.adotapet.databinding.FragmentHomeBinding;
 
 public class HomeFragment extends Fragment {
@@ -33,12 +37,19 @@ public class HomeFragment extends Fragment {
         configCardView();
         configPetDataObeservable(petAdapter);
 
+
         View root = binding.getRoot();
         return root;
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+
+    }
+
     private void configCardView() {
-        petAdapter = new PetViewHolderAdapter(Pet.mockPets());
+        petAdapter = new PetViewHolderAdapter(Pet.mockPets(),this.getContext(),petViewModel);
         binding.recyclerViewPets.setAdapter(petAdapter);
         binding.recyclerViewPets.setHasFixedSize(true);
 
@@ -52,6 +63,22 @@ public class HomeFragment extends Fragment {
             petAdapter.setPetsData(pets);
             petAdapter.notifyDataSetChanged();
         });
+    }
+
+    @Override
+    public boolean onContextItemSelected(@NonNull MenuItem item) {
+        int itemId = item.getItemId();
+
+//        if(itemId == R.id.action_delete){
+//            AdapterView.AdapterContextMenuInfo adapterContextMenuInfo = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
+//            Pet chosenPet = petAdapter.getPetByPosition(adapterContextMenuInfo.position);
+//            petViewModel.delete(chosenPet);
+//        }
+        return super.onContextItemSelected(item);
+    }
+
+    private void configItemClickListerner(){
+
     }
 
 

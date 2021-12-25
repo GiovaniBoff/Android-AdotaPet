@@ -1,4 +1,4 @@
-package br.edu.ifrs.adotapet.data.dao;
+package br.edu.ifrs.adotapet.model.dao;
 
 
 
@@ -11,7 +11,7 @@ import androidx.room.Query;
 
 import java.util.List;
 
-import br.edu.ifrs.adotapet.data.entity.User;
+import br.edu.ifrs.adotapet.model.User;
 
 @Dao
 public interface UserDAO {

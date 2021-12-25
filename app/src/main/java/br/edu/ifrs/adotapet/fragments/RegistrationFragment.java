@@ -1,4 +1,4 @@
-package br.edu.ifrs.adotapet.ui.home;
+package br.edu.ifrs.adotapet.fragments;
 
 import android.os.Bundle;
 
@@ -10,8 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import br.edu.ifrs.adotapet.data.dao.repository.UserRepository;
-import br.edu.ifrs.adotapet.databinding.FragmentLoginBinding;
+import br.edu.ifrs.adotapet.model.dao.repository.UserRepository;
 import br.edu.ifrs.adotapet.databinding.FragmentRegistrationBinding;
 
 

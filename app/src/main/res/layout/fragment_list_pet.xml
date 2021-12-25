@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.home.ListPetFragment"
+    tools:context=".fragments.ListPetFragment"
     app:cardElevation="4dp"
     android:layout_margin="10dp"
     app:cardBackgroundColor="@color/secondaryLightColor"
@@ -48,8 +48,32 @@
             android:textColor="@color/black"
             />
 
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="right">
 
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btnExcluir"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="20dp"
+                android:text="Excluir"
+                app:srcCompat="@drawable/ic_btn_delete"
+                tools:ignore="SpeakableTextPresentCheck"
+                android:background="@color/primaryDarkColor"/>
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btnEditar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="10dp"
+                android:text="Editar"
+                app:srcCompat="@drawable/ic_btn_edit"
+                tools:ignore="SpeakableTextPresentCheck"
+                android:background="@color/primaryColor"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
     </androidx.appcompat.widget.LinearLayoutCompat>
-
 
 </androidx.cardview.widget.CardView>

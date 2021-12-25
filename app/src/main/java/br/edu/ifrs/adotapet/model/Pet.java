@@ -1,11 +1,10 @@
-package br.edu.ifrs.adotapet.data.entity;
+package br.edu.ifrs.adotapet.model;
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 @Entity
 public class Pet {

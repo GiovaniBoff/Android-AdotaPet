@@ -1,4 +1,4 @@
-package br.edu.ifrs.adotapet.data.dao;
+package br.edu.ifrs.adotapet.model.dao;
 
 import android.content.Context;
 
@@ -6,12 +6,11 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
-import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import br.edu.ifrs.adotapet.data.entity.Pet;
-import br.edu.ifrs.adotapet.data.entity.User;
+import br.edu.ifrs.adotapet.model.Pet;
+import br.edu.ifrs.adotapet.model.User;
 
 @Database(entities = {User.class, Pet.class}, version = 1)
 public abstract class AppDatabase extends RoomDatabase {

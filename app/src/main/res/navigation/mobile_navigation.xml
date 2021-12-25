@@ -3,16 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/homeListFragment">
+    app:startDestination="@+id/nav_home">
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="br.edu.ifrs.adotapet.ui.home.HomeFragment"
+        android:name="br.edu.ifrs.adotapet.fragments.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/nav_login"
-        android:name="br.edu.ifrs.adotapet.ui.home.LoginFragment"
+        android:name="br.edu.ifrs.adotapet.fragments.LoginFragment"
         android:label="Login"
         tools:layout="@layout/fragment_login"
         >
@@ -26,28 +26,28 @@
 
     <fragment
         android:id="@+id/nav_registration"
-        android:name="br.edu.ifrs.adotapet.ui.home.RegistrationFragment"
+        android:name="br.edu.ifrs.adotapet.fragments.RegistrationFragment"
         android:label="Cadastro"
         tools:layout="@layout/fragment_registration"
         />
     <fragment
         android:id="@+id/addPetFragment"
-        android:name="br.edu.ifrs.adotapet.ui.home.AddPetFragment"
+        android:name="br.edu.ifrs.adotapet.fragments.AddPetFragment"
         android:label="fragment_add_pet"
         tools:layout="@layout/fragment_add_pet" />
     <fragment
         android:id="@+id/editPetFragment"
-        android:name="br.edu.ifrs.adotapet.ui.home.EditPetFragment"
+        android:name="br.edu.ifrs.adotapet.fragments.EditPetFragment"
         android:label="fragment_edit_pet"
         tools:layout="@layout/fragment_edit_pet" />
     <fragment
         android:id="@+id/listPetFragment"
-        android:name="br.edu.ifrs.adotapet.ui.home.ListPetFragment"
+        android:name="br.edu.ifrs.adotapet.fragments.ListPetFragment"
         android:label="fragment_list_pet"
         tools:layout="@layout/fragment_list_pet" />
     <fragment
         android:id="@+id/homeListFragment"
-        android:name="br.edu.ifrs.adotapet.HomeListFragment"
+        android:name="br.edu.ifrs.adotapet.fragments.HomeListFragment"
         android:label="fragment_home_list"
         tools:layout="@layout/fragment_home_list" >
         <action

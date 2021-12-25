@@ -1,4 +1,4 @@
-package br.edu.ifrs.adotapet.ui.home;
+package br.edu.ifrs.adotapet.fragments;
 
 import android.os.Bundle;
 

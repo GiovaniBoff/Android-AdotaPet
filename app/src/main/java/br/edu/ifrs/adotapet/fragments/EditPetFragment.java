@@ -1,6 +1,5 @@
-package br.edu.ifrs.adotapet.ui.home;
+package br.edu.ifrs.adotapet.fragments;
 
-import android.app.Application;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -10,9 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import br.edu.ifrs.adotapet.R;
-import br.edu.ifrs.adotapet.data.dao.AppDatabase;
-import br.edu.ifrs.adotapet.data.dao.PetDAO;
-import br.edu.ifrs.adotapet.data.entity.Pet;
+import br.edu.ifrs.adotapet.model.dao.AppDatabase;
+import br.edu.ifrs.adotapet.model.dao.PetDAO;
+import br.edu.ifrs.adotapet.model.Pet;
 
 /**
  * A simple {@link Fragment} subclass.

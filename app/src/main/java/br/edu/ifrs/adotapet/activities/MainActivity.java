@@ -1,6 +1,7 @@
-package br.edu.ifrs.adotapet;
+package br.edu.ifrs.adotapet.activities;
 
 import android.os.Bundle;
+import android.view.ContextMenu;
 import android.view.View;
 import android.view.Menu;
 
@@ -14,6 +15,7 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
+import br.edu.ifrs.adotapet.R;
 import br.edu.ifrs.adotapet.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
@@ -48,6 +50,11 @@ public class MainActivity extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
+    }
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        super.onCreateContextMenu(menu, v, menuInfo);
+        getMenuInflater().inflate(R.menu.main,menu);
     }
 
     @Override

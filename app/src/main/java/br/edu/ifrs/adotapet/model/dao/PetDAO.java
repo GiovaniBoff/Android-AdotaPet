@@ -1,4 +1,4 @@
-package br.edu.ifrs.adotapet.data.dao;
+package br.edu.ifrs.adotapet.model.dao;
 
 import static androidx.room.OnConflictStrategy.REPLACE;
 
@@ -11,7 +11,8 @@ import androidx.room.Update;
 
 import java.util.List;
 
-import br.edu.ifrs.adotapet.data.entity.Pet;
+import br.edu.ifrs.adotapet.model.Pet;
+
 
 @Dao
 public interface PetDAO {
