@@ -1,4 +1,4 @@
-package br.edu.ifrs.adotapet.fragments;
+package br.edu.ifrs.adotapet.fragments.Login;
 
 import android.os.Bundle;
 

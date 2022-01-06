@@ -3,11 +3,12 @@ package br.edu.ifrs.adotapet.model;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-public class Pet {
+public class Pet implements Serializable {
     @PrimaryKey(autoGenerate = true)
     private int id;
     private String name;

@@ -28,6 +28,7 @@ public abstract class AppDatabase extends RoomDatabase {
         if(appDatabase == null) {
             appDatabase = Room.databaseBuilder(context.getApplicationContext(), AppDatabase.class, "driver_database")
                     .fallbackToDestructiveMigration()
+                    .allowMainThreadQueries()
                     .build();
         }
         return appDatabase;

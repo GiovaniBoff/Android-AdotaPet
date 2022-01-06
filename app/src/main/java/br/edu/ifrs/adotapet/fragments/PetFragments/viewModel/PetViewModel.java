@@ -1,4 +1,4 @@
-package br.edu.ifrs.adotapet.fragments.viewModel;
+package br.edu.ifrs.adotapet.fragments.PetFragments.viewModel;
 
 import android.app.Application;
 

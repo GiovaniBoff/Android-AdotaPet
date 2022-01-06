@@ -9,10 +9,17 @@
         android:id="@+id/nav_home"
         android:name="br.edu.ifrs.adotapet.fragments.HomeFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_listPetFragment"
+            app:destination="@id/listPetFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_editPetFragment"
+            app:destination="@id/editPetFragment" />
+    </fragment>
     <fragment
         android:id="@+id/nav_login"
-        android:name="br.edu.ifrs.adotapet.fragments.LoginFragment"
+        android:name="br.edu.ifrs.adotapet.fragments.Login.LoginFragment"
         android:label="Login"
         tools:layout="@layout/fragment_login"
         >
@@ -26,36 +33,32 @@
 
     <fragment
         android:id="@+id/nav_registration"
-        android:name="br.edu.ifrs.adotapet.fragments.RegistrationFragment"
+        android:name="br.edu.ifrs.adotapet.fragments.Login.RegistrationFragment"
         android:label="Cadastro"
         tools:layout="@layout/fragment_registration"
         />
     <fragment
         android:id="@+id/addPetFragment"
-        android:name="br.edu.ifrs.adotapet.fragments.AddPetFragment"
+        android:name="br.edu.ifrs.adotapet.fragments.PetFragments.AddPetFragment"
         android:label="fragment_add_pet"
-        tools:layout="@layout/fragment_add_pet" />
+        tools:layout="@layout/fragment_add_pet" >
+        <action
+            android:id="@+id/action_addPetFragment_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
     <fragment
         android:id="@+id/editPetFragment"
-        android:name="br.edu.ifrs.adotapet.fragments.EditPetFragment"
-        android:label="fragment_edit_pet"
-        tools:layout="@layout/fragment_edit_pet" />
+        android:name="br.edu.ifrs.adotapet.fragments.PetFragments.EditPetFragment"
+        android:label="Adicionar Pet"
+        tools:layout="@layout/fragment_edit_pet" >
+        <action
+            android:id="@+id/action_editPetFragment_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
     <fragment
         android:id="@+id/listPetFragment"
-        android:name="br.edu.ifrs.adotapet.fragments.ListPetFragment"
-        android:label="fragment_list_pet"
+        android:name="br.edu.ifrs.adotapet.fragments.PetFragments.ListPetFragment"
+        android:label="Editar Pet"
         tools:layout="@layout/fragment_list_pet" />
-    <fragment
-        android:id="@+id/homeListFragment"
-        android:name="br.edu.ifrs.adotapet.fragments.HomeListFragment"
-        android:label="fragment_home_list"
-        tools:layout="@layout/fragment_home_list" >
-        <action
-            android:id="@+id/action_homeListFragment_to_addPetFragment"
-            app:destination="@id/addPetFragment" />
-        <action
-            android:id="@+id/action_homeListFragment_to_listPetFragment"
-            app:destination="@id/listPetFragment" />
-    </fragment>
 
 </navigation>

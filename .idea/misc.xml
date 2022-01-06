@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../../../layout/custom_preview.xml" value="0.2682051282051282" />
         <entry key="../../../../../layout/custom_preview.xml" value="0.3527777777777778" />
         <entry key="..\:/Users/Giovani/AppData/Local/Android/Sdk/platforms/android-31/data/res/layout/simple_list_item_1.xml" value="0.10092592592592593" />
         <entry key="..\:/Users/Giovani/Documents/ESTUDOS/ifrs/Android-AdotaPet/app/src/main/res/drawable/ic_menu_camera.xml" value="0.3764102564102564" />
@@ -33,11 +34,12 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.296195652173913" />
         <entry key="app/src/main/res/layout/app_bar_main.xml" value="0.12447916666666667" />
         <entry key="app/src/main/res/layout/content_main.xml" value="0.296195652173913" />
-        <entry key="app/src/main/res/layout/fragment_add_pet.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_add_pet.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_blank.xml" value="0.35572916666666665" />
         <entry key="app/src/main/res/layout/fragment_edit_pet.xml" value="0.21979166666666666" />
         <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.12447916666666667" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.12447916666666667" />
+        <entry key="app/src/main/res/layout/fragment_home_list.xml" value="0.20425724637681159" />
         <entry key="app/src/main/res/layout/fragment_list_pet.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.19791666666666666" />
         <entry key="app/src/main/res/layout/fragment_registration.xml" value="0.3411458333333333" />

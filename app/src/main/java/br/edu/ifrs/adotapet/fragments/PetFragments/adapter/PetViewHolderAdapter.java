@@ -1,8 +1,8 @@
-package br.edu.ifrs.adotapet.fragments.adapter;
+package br.edu.ifrs.adotapet.fragments.PetFragments.adapter;
 
 import android.content.Context;
 import android.content.DialogInterface;
-import android.util.Log;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,13 +12,14 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
 import br.edu.ifrs.adotapet.R;
 import br.edu.ifrs.adotapet.model.Pet;
-import br.edu.ifrs.adotapet.fragments.viewModel.PetViewModel;
+import br.edu.ifrs.adotapet.fragments.PetFragments.viewModel.PetViewModel;
 
 public class PetViewHolderAdapter extends RecyclerView.Adapter<PetViewHolderAdapter.ViewHolder> {
     List<Pet> petsData;
@@ -35,15 +36,15 @@ public class PetViewHolderAdapter extends RecyclerView.Adapter<PetViewHolderAdap
         TextView petBreed;
         TextView petSize;
         ImageButton btnDelete;
-        Button btnEdit;
+        ImageButton btnEdit;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-
             petName = itemView.findViewById(R.id.textViewPetName);
             petBreed = itemView.findViewById(R.id.textViewPetBreed);
             petSize = itemView.findViewById(R.id.textViewPetSize);
             btnDelete = itemView.findViewById(R.id.btnExcluir);
+            btnEdit = itemView.findViewById(R.id.btnEditar);
         }
     }
 
@@ -66,6 +67,10 @@ public class PetViewHolderAdapter extends RecyclerView.Adapter<PetViewHolderAdap
             removePet(position);
         });
 
+        holder.btnEdit.setOnClickListener(view -> {
+            editPet(position,view);
+        });
+
     }
 
 
@@ -86,6 +91,18 @@ public class PetViewHolderAdapter extends RecyclerView.Adapter<PetViewHolderAdap
                         notifyItemRemoved(position);
 
                     }}).setNegativeButton("Não", null).show();
+    }
+
+    private void editPet(int position,View view){
+        new AlertDialog.Builder(context)
+                .setTitle("Deletando pet")
+                .setMessage("Tem certeza que deseja editar esse Item?")
+                .setPositiveButton("Sim", (dialogInterface, i) -> {
+                    Pet pet = petViewModel.getPetById(petsData.get(position).getId());
+                    Bundle bundle = new Bundle();
+                    bundle.putSerializable("Pet",pet);
+                    Navigation.findNavController(view).navigate(R.id.action_nav_home_to_editPetFragment,bundle);
+                }).setNegativeButton("Não", null).show();
     }
 
     public void setPetsData(List<Pet> pets){
